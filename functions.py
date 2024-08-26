@@ -1,14 +1,14 @@
-from pywebio.output import clear_scope, use_scope, style, put_markdown
+from pywebio.output import clear_scope, put_markdown
 
+from pages.copy_db import *
+from pages.edit_order import *
 from pages.home import page_home
 from pages.settings import *
 from pages.users.users import *
-from pages.delete_order import *
-from pages.copy_db import *
 
 menu_items = [
     {'id': 'home', 'title': 'Home', 'fas': 'fa-home', 'func': page_home, 'role': 'user'},
-    {'id': 'delete_order', 'title': 'Delete Order', 'fas': 'fa-edit', 'func': page_delete_order, 'role': 'user'},
+    {'id': 'edit_order', 'title': 'Edit Order', 'fas': 'fa-edit', 'func': page_edit_order, 'role': 'user'},
     {'id': 'copy_db', 'title': 'Copy DB', 'fas': 'fa-copy', 'func': page_copy_db, 'role': 'user'},
     {'id': '-', 'title': '----', 'fas': None, 'func': None, 'role': 'admin'},
     {'id': 'users', 'title': 'Users', 'fas': 'fa-users', 'func': page_users, 'role': 'admin'},

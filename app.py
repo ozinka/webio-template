@@ -1,13 +1,13 @@
 from pywebio import start_server, config
 from pywebio.session import set_env
 
-from menu import show_menu
+from menu import show_app
 
 
 @config(theme="dark")
 def main():
     set_env(title="Miki-Here Automation")
-    show_menu()
+    show_app()
 
 
 if __name__ == "__main__":
