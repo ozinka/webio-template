@@ -1,6 +1,5 @@
 from pywebio import start_server, config
 from pywebio.session import set_env
-
 from menu import show_app
 
 

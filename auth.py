@@ -1,24 +1,20 @@
 import hashlib
 from functools import wraps
-
+from config import config
 import jwt
 import datetime
-
+import json
 from pywebio.session import run_js, eval_js
 
-# Secret key for JWT
-SECRET_KEY = "your-secret-key"
+USERS = config.users
+SECRET_KEY = config.config['secret_key']
 
-# Mock user database
-users = {
-    "user1": hashlib.sha256("password1".encode()).hexdigest(),
-    "user2": hashlib.sha256("password2".encode()).hexdigest(),
-    "ozi": hashlib.sha256("1".encode()).hexdigest(),
-}
+print(json.dumps(USERS, indent=4))
+print(json.dumps(config.config, indent=4))
 
 
 def authenticate(username, password):
-    if username in users and users[username] == hashlib.sha256(password.encode()).hexdigest():
+    if username in USERS and USERS[username]['password'] == hashlib.sha256(password.encode()).hexdigest():
         return True
     return False
 
