@@ -1,0 +1,9 @@
+{
+  "secret_key": "your-secret-key",
+  "web_prod_link": "",
+  "web_dev_link": "",
+  "db_prod_host": "",
+  "db_dev_host": "",
+  "db_prod_user": "",
+  "db_prod_password": ""
+}
